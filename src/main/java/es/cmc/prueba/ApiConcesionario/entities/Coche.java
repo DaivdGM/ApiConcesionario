@@ -29,7 +29,7 @@ public class Coche {
 	private String modelo;
 	
 	@Column(name = "kms")
-	private String kms;
+	private BigDecimal kms;
 	
 	@Column(name = "propulsion")
 	private String propulsion;
@@ -50,7 +50,7 @@ public class Coche {
 	}
 	
 
-	public Coche(Integer id, String bastidor, String marca, String modelo, String kms, String propulsion) {
+	public Coche(Integer id, String bastidor, String marca, String modelo, BigDecimal kms, String propulsion) {
 		super();
 		this.id = id;
 		this.bastidor = bastidor;
@@ -94,11 +94,11 @@ public class Coche {
 		this.modelo = modelo;
 	}
 
-	public String getKms() {
+	public BigDecimal getKms() {
 		return kms;
 	}
 
-	public void setKms(String kms) {
+	public void setKms(BigDecimal kms) {
 		this.kms = kms;
 	}
 
@@ -108,6 +108,46 @@ public class Coche {
 
 	public void setPropulsion(String propulsion) {
 		this.propulsion = propulsion;
+	}
+	
+
+	public Date getFechaVendido() {
+		return fechaVendido;
+	}
+
+
+	public void setFechaVendido(Date fechaVendido) {
+		this.fechaVendido = fechaVendido;
+	}
+
+
+	public Date getFechaCreacion() {
+		return fechaCreacion;
+	}
+
+
+	public void setFechaCreacion(Date fechaCreacion) {
+		this.fechaCreacion = fechaCreacion;
+	}
+
+
+	public BigDecimal getPrecioVenta() {
+		return precioVenta;
+	}
+
+
+	public void setPrecioVenta(BigDecimal precioVenta) {
+		this.precioVenta = precioVenta;
+	}
+
+
+	public String getVendedor() {
+		return vendedor;
+	}
+
+
+	public void setVendedor(String vendedor) {
+		this.vendedor = vendedor;
 	}
 
 
